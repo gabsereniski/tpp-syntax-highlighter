@@ -1,0 +1,33 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "tiny plus plus",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#numerals"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#operators"
+		},
+		{
+			"include": "#identifiers"
+		},
+		{
+			"include": "#variables"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.tpp",
+				"match": "\\b(se|senão|então|fim|repita|até)\\b"
+			}]
+		}
+	},
+	"scopeName": "source.tpp"
+}
