@@ -1,0 +1,25 @@
+{
+  "name": "tpp-syntax-highlighter",
+  "displayName": "tpp syntax highlighter",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.81.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "tpp",
+      "aliases": ["tiny plus plus", "tpp"],
+      "extensions": [".tpp"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "tpp",
+      "scopeName": "source.tpp",
+      "path": "./syntaxes/tpp.tmLanguage.json"
+    }]
+  }
+}
