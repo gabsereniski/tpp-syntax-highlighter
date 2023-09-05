@@ -1,0 +1,65 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Tpp",
+	"patterns": [
+		{
+			"include": "#constants"
+		},
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#entity"
+		},
+		{
+			"include": "#comments"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.tpp",
+					"match": "\\b(se|fim|fimse|repita|senão|então|retorna|inteiro|até)\\b"
+				},
+				{
+					"name": "entity.name.function",
+					"match": "\\b(leia|escreva|principal)\\b"
+				},
+				{
+					"name": "entity.name.type",
+					"begin": "[A-Za-z0-9]+\\(",
+					"end": ")"
+				}
+			]
+		},
+		"constants": {
+			"patterns": [
+				{
+				"name": "constant.character",
+				"match": "(<|>|:=|=|-|\\+|\\*|/)"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.tpp",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.tpp",
+					"match": "\\\\b."
+				}
+			]
+		},
+		"comments": {
+			"name": "comment.block",
+			"begin": "{",
+			"end": "}"
+		}
+	},
+	"scopeName": "source.tpp"
+}
